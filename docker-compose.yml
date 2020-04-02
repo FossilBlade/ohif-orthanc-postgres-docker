@@ -2,7 +2,7 @@ version: '3.6'
 services:
 
   viewer:
-    image: ohif/viewer:v3.7.1.10058
+    image: ohif/viewer:v3.8.16.10895
     container_name: viewer
     depends_on:
       - orthanc
@@ -19,7 +19,7 @@ services:
       - ${VIEWER_CONFIG}:/usr/share/nginx/html/app-config.js:ro
 
   orthanc:
-    image: osimis/orthanc:20.2.0
+    image: osimis/orthanc:20.3.1
     container_name: orthanc
     depends_on:
       - postgres
